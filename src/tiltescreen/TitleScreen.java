@@ -1,6 +1,7 @@
 
 package tiltescreen;
 import java.awt.Color;
+import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.border.LineBorder;
@@ -17,35 +18,24 @@ public class TitleScreen extends javax.swing.JFrame {
         
         this.setLayout(null);
         this.setTitle("Fraction Game Screen");
-        
-            Games[0] = new JButton ();
+        for(int x = 0; x<3; x++){
+            Games[x] = new JButton ();
+            Games[x].setOpaque(true);
+            Games[x].setBackground(Color.LIGHT_GRAY);
+            this.getContentPane().add(Games[x]);
+            Games[x].setBounds(150+(x*385), 150, 110, 110);
+            Games[x].setBorder(new LineBorder(Color.black,1)); 
+            Games[x].setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+            Games[x].addMouseListener(new java.awt.event.MouseAdapter() {
+                      public void mouseClicked(java.awt.event.MouseEvent evt){
+                          GamesClicked(evt);
+                      }
+                 });
+        }
             Games[0].setText("Brick Game");
-            Games[0].setOpaque(true);
-            Games[0].setBackground(Color.LIGHT_GRAY);
-            this.getContentPane().add(Games[0]);
-            Games[0].setBounds(150+(0*55), 150, 110, 110);
-            Games[0].setBorder(new LineBorder(Color.black,1)); 
-            Games[0].setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-         
-            
-            Games[1] = new JButton ();
             Games[1].setText("Bubble Game");
-            Games[1].setOpaque(true);
-            Games[1].setBackground(Color.LIGHT_GRAY);
-            this.getContentPane().add(Games[1]);
-            Games[1].setBounds(535+(1*55), 150, 110,110);
-            Games[1].setBorder(new LineBorder(Color.black,1));
-            Games[1].setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            
-            Games[2] = new JButton ();
             Games[2].setText("Ordering Fractions");
-            Games[2].setOpaque(true);
-            Games[2].setBackground(Color.LIGHT_GRAY);
-            this.getContentPane().add(Games[2]);
-            Games[2].setBounds(920+(2*55), 150, 110, 110);
-            Games[2].setBorder(new LineBorder(Color.black,1));
-            Games[2].setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-           
+            
             buttons[0] = new JLabel ();
             buttons[0].setText("Welcome TO  Fraction Interaction");
             buttons[0].setOpaque(true);
@@ -56,6 +46,9 @@ public class TitleScreen extends javax.swing.JFrame {
             buttons[0].setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             
     }
+   private void GamesClicked(MouseEvent evt) {
+               ((JButton)evt.getSource()).setVisible(false);
+                }
 
     /**
      * This method is called from within the constructor to initialize the form.
