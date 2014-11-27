@@ -11,7 +11,7 @@ public class TitleScreen extends javax.swing.JFrame {
 
    JLabel [] buttons = new JLabel [1];
    JButton [] Games = new JButton [4];
-    
+
     public TitleScreen() {
         initComponents();
         
@@ -36,19 +36,24 @@ public class TitleScreen extends javax.swing.JFrame {
             Games[1].setText("Bubble Game");
             Games[2].setText("Ordering Fractions");
             Games[3].setText(("Team Screen"));
-            
-            
-            
+
             buttons[0] = new JLabel ();
             buttons[0].setText("Welcome TO  Fraction Interaction");
             buttons[0].setOpaque(true);
-            buttons[0].setBackground(Color.WHITE);
+            buttons[0].setBackground(Color.GREEN);
             this.getContentPane().add(buttons[0]);
-            buttons[0].setBounds(535+(0*55), 50, 200, 50);
+            buttons[0].setBounds(435+(0*55), 50, 400, 50);
             buttons[0].setBorder(new LineBorder(Color.black,1));
             buttons[0].setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             
+            
+          
+    
+    
+     
     }
+            
+    
    private void GamesClicked(MouseEvent evt) {
               
                 }
