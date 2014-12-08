@@ -9,44 +9,11 @@ import javax.swing.border.LineBorder;
 
 public class TitleScreen extends javax.swing.JFrame {
 
-   JLabel [] buttons = new JLabel [1];
-   JButton [] Games = new JButton [4];
+
 
     public TitleScreen() {
         initComponents();
         
-        
-        this.setLayout(null);
-        this.setTitle("Fraction Game Screen");
-        for(int x = 0; x<4; x++){
-            Games[x] = new JButton ();
-            Games[x].setOpaque(true);
-            Games[x].setBackground(Color.LIGHT_GRAY);
-            this.getContentPane().add(Games[x]);
-            Games[x].setBounds(150+(x*275), 350, 110, 110);
-            Games[x].setBorder(new LineBorder(Color.black,1)); 
-            Games[x].setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            Games[x].addMouseListener(new java.awt.event.MouseAdapter() {
-                      public void mouseClicked(java.awt.event.MouseEvent evt){
-                          GamesClicked(evt);
-                      }
-                 });
-        }
-            Games[0].setText("Brick Game");
-            Games[1].setText("Bubble Game");
-            Games[2].setText("Ordering Fractions");
-            Games[3].setText(("Team Screen"));
-
-            buttons[0] = new JLabel ();
-            buttons[0].setText("Welcome TO  Fraction Interaction");
-            buttons[0].setOpaque(true);
-            buttons[0].setBackground(Color.GREEN);
-            this.getContentPane().add(buttons[0]);
-            buttons[0].setBounds(435+(0*55), 50, 400, 50);
-            buttons[0].setBorder(new LineBorder(Color.black,1));
-            buttons[0].setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-            
-            
           
     
     
