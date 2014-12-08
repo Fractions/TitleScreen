@@ -23,7 +23,7 @@ public class TitleScreen extends javax.swing.JFrame {
             Games[x].setOpaque(true);
             Games[x].setBackground(Color.LIGHT_GRAY);
             this.getContentPane().add(Games[x]);
-            Games[x].setBounds(150+(x*275), 150, 110, 110);
+            Games[x].setBounds(150+(x*275), 350, 110, 110);
             Games[x].setBorder(new LineBorder(Color.black,1)); 
             Games[x].setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             Games[x].addMouseListener(new java.awt.event.MouseAdapter() {
