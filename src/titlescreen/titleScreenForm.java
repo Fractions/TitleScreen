@@ -36,6 +36,11 @@ public class titleScreenForm extends javax.swing.JFrame {
         backgroundLayer = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Fraction Interaction");
+        setMaximumSize(new java.awt.Dimension(640, 440));
+        setMinimumSize(new java.awt.Dimension(640, 440));
+        setPreferredSize(new java.awt.Dimension(642, 440));
+        setSize(new java.awt.Dimension(640, 440));
         getContentPane().setLayout(null);
 
         orderingGameLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/OrderingGameLabel.png"))); // NOI18N
