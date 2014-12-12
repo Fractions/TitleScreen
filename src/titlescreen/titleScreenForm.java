@@ -33,14 +33,10 @@ public class titleScreenForm extends javax.swing.JFrame {
         BubbleGameButton = new javax.swing.JLabel();
         teamsButton = new javax.swing.JButton();
         titleLabel = new javax.swing.JLabel();
-        backgroundLayer = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Fraction Interaction");
-        setMaximumSize(new java.awt.Dimension(640, 440));
         setMinimumSize(new java.awt.Dimension(640, 440));
-        setPreferredSize(new java.awt.Dimension(642, 440));
-        setSize(new java.awt.Dimension(640, 440));
         getContentPane().setLayout(null);
 
         orderingGameLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/OrderingGameLabel.png"))); // NOI18N
@@ -84,9 +80,9 @@ public class titleScreenForm extends javax.swing.JFrame {
         getContentPane().add(titleLabel);
         titleLabel.setBounds(170, 10, 300, 40);
 
-        backgroundLayer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/background.png"))); // NOI18N
-        getContentPane().add(backgroundLayer);
-        backgroundLayer.setBounds(0, 0, 640, 420);
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/background.png"))); // NOI18N
+        getContentPane().add(background);
+        background.setBounds(0, 0, 640, 420);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -100,6 +96,10 @@ public class titleScreenForm extends javax.swing.JFrame {
     }//GEN-LAST:event_brickGameButtonMouseClicked
 
     private void orderingGameLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderingGameLabelMouseClicked
+        this.setVisible(false);
+        OrderingGameForm o = new OrderingGameForm();
+        o.setVisible(true);
+        
         System.out.println("Pressed");
     }//GEN-LAST:event_orderingGameLabelMouseClicked
 
@@ -144,7 +144,7 @@ public class titleScreenForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BubbleGameButton;
-    private javax.swing.JLabel backgroundLayer;
+    private javax.swing.JLabel background;
     private javax.swing.JLabel brickGameButton;
     private javax.swing.JLabel orderingGameLabel;
     private javax.swing.JButton teamsButton;
